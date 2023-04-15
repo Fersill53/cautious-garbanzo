@@ -1,5 +1,9 @@
 var quizArea = document.getElementById("quiz");
 var startBtn = document.getElementById("startBtn");
+startBtn.addEventListener('click', startGame);
+var questionContainerElement = document.getElementById('questBox');
+var shfQuestions, currentQuestionIndex;
+var
 
 var timerCount = 60;
 var score;
@@ -7,14 +11,22 @@ var score;
     var questions = [
         {
             question: "What team is the best in the Premier league?",
-            answerChoices: ["Manchester United", "Liverpool", "Manchester City", "Arsenal"],
-            correctAnswer: "Manchester United"
+            answerChoices: [
+                {text: 'Manchester United', correct: true}, 
+                {text: 'Liverpool', correct: false}, 
+                {text: 'Manchester City', correct: false}, 
+                {text: 'Arsenal', correct: false}]
+            
         },
 
         {
             question: "What team is the bandwagon team in the Premier league?",
-            answerChoices: ["Manchester United", "Liverpool", "Manchester City", "Arsenal"],
-            correctAnswer: "Manchester City"
+            answerChoices: [
+                {text: 'Manchester United', correct: false}, 
+                {text: 'Liverpool', correct: false}, 
+                {text: 'Manchester City', correct: true}, 
+                {text: 'Arsenal', correct: false}]
+
         },
 
         {
@@ -45,7 +57,28 @@ var score;
 
 var currentQuestion = 0;
 
-function startGame(event) {
-    event.preventDefault();
+//function startGame(event) {
+    //event.preventDefault();
     
+//}
+
+function startGame() {
+    console.log('lets go')
+    startBtn.classList.add('hide')
+    shfQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    questionContainerElement.classList.remove('hide')
+    setNextQuestion()
+}
+
+function setNextQuestion() {
+    showQuestion(shfQuestions[currentQuestionIndex])
+}
+
+function showQuestion(question) {
+
+}
+
+function selectAnswer() {
+
 }
