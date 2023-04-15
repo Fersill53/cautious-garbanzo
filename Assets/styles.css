@@ -1,0 +1,38 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+:root {
+    --reg: black;
+    --nope: red;
+    --yes: green;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--reg);
+}
+
+body.yes {
+    background-color: var(--yes);
+}
+body.nope {
+    background-color: var(--nope);
+}
+
+.quizArea {
+    width: 800px;
+    max-width: 80%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: lime 0 0 10px 2px;
+}
+
