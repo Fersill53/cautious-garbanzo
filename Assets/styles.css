@@ -59,10 +59,10 @@ body.wrong {
 .btn:hover {
     box-shadow: #ff00ff 0 0 10px 2px;
 }
-.btn.yes {
+.btn.correct {
     background-color: #00ff7f;
 }
-.btn.nope {
+.btn.wrong {
     background-color: #ff4040;
 }
 
