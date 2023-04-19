@@ -7,6 +7,10 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answerBtn');
 
 startBtn.addEventListener('click', startGame);
+nxtBtn.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion()
+})
 
 function startGame() {
     console.log('lets go')
@@ -31,6 +35,7 @@ function showQuestion(question) {
     if (answerChoices.correct) {
         button.dataset.correct = answerChoices.correct
     } 
+    
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
     })
@@ -50,6 +55,13 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nxtBtn.classList.remove('hide')
+    } else {
+        startBtn.inner = 'Restart'
+        startBtn.classList.remove('hide')
+    }
+    
 }
 
 function setStatusClass(element, correct) {
