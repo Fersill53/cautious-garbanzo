@@ -23,5 +23,4 @@ Code created by me. Had to get help from WebDevSimplified when my project failed
 ## Deployment
 
 
-![Horiseon-solutions.png](https://github.com/Fersill53/Horiseon-solutions-project1/blob/main/Horiseon-solutions.png)
-Screenshot 2023-04-18 at 8.37.32 PM.png
+![Screenshot 2023-04-18 at 8.37.32 PM.png](https://github.com/Fersill53/cautious-garbanzo/blob/main/Screenshot%202023-04-18%20at%208.37.32%20PM.png)
